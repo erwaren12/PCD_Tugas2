@@ -1,27 +1,27 @@
 # Tugas Pengolahan Citra Digital (PCD) - Transformasi Citra
 
-[cite_start]Repositori ini berisi implementasi algoritma **Transformasi Tingkat Keabuan** [cite: 1] menggunakan bahasa pemrograman Python dan *library* OpenCV. 
+Repositori ini berisi implementasi algoritma **Transformasi Tingkat Keabuan** menggunakan bahasa pemrograman Python, *library* OpenCV, dan Matplotlib. Seluruh kode disajikan dalam format interaktif Jupyter Notebook (`.ipynb`) sehingga gambar hasil pengolahan citra dapat langsung dilihat di dalam dokumen tanpa memerlukan jendela *pop-up* eksternal.
 
-[cite_start]Berdasarkan materi perkuliahan, repositori ini mengimplementasikan empat jenis transformasi[cite: 45]:
-1. [cite_start]Transformasi Linier (Negative Image) [cite: 46]
-2. [cite_start]Transformasi Logaritmik [cite: 47]
-3. [cite_start]Transformasi Inverse Logaritmik [cite: 47]
-4. [cite_start]Transformasi Power-Law ($n^{th}$ power) [cite: 48]
+Berdasarkan materi perkuliahan, repositori ini mengimplementasikan empat jenis transformasi:
+1. Transformasi Linier (Negative Image)
+2. Transformasi Logaritmik
+3. Transformasi Inverse Logaritmik
+4. Transformasi Power-Law ($n^{th}$ power)
 
 ### 🌟 Pendekatan Khusus: Pemrosesan Ruang Warna HSV
-Untuk mencegah efek klise pada warna asli (distorsi warna), citra berwarna (BGR) dikonversi terlebih dahulu ke ruang warna **HSV (Hue, Saturation, Value)**. Rumus matematika hanya diaplikasikan pada saluran **V (Value/Kecerahan)**, sementara warna dasar (Hue) dan kepekatan (Saturation) dibiarkan utuh. Setelah diproses, gambar dikembalikan ke format BGR agar warna tetap natural.
+Untuk mencegah efek klise pada warna asli (distorsi warna), citra berwarna (BGR) dikonversi terlebih dahulu ke ruang warna **HSV (Hue, Saturation, Value)**. Rumus matematika hanya diaplikasikan pada saluran **V (Value/Kecerahan)**, sementara warna dasar (Hue) dan kepekatan (Saturation) dibiarkan utuh. Setelah diproses, gambar dikonversi ke format RGB agar warna tetap natural saat dirender oleh Matplotlib.
 
 ## 📁 Struktur File
 
-* [cite_start]**`negative.py`**: Implementasi *Negative Image* ($G = L - F$)[cite: 68, 70].
-* [cite_start]**`logaritmik.py`**: Implementasi Transformasi Logaritmik ($G = c \cdot \log(F + 1)$)[cite: 82, 84].
-* [cite_start]**`inverse_logaritmik.py`**: Implementasi Transformasi Inverse Logaritmik ($G = c \cdot \log(L - F + 1)$)[cite: 85, 86].
-* **`power_low.py`**: Implementasi Transformasi Power Law ($G = c \cdot F^y$)[cite: 109, 112].
-* **`main.py`**: Program utama interaktif/rangkuman yang mengintegrasikan seluruh metode transformasi di atas dalam satu jendela.
+* **`negative.ipynb`**: Implementasi *Negative Image* ($G = L - F$).
+* **`logaritmik.ipynb`**: Implementasi Transformasi Logaritmik ($G = c \cdot \log(F + 1)$).
+* **`inverse_logaritmik.ipynb`**: Implementasi Transformasi Inverse Logaritmik ($G = c \cdot \log(L - F + 1)$).
+* **`power_law.ipynb`**: Implementasi Transformasi Power Law ($G = c \cdot F^y$).
+* **`main.ipynb`**: *Notebook* utama berupa rangkuman yang memproses dan menampilkan seluruh metode transformasi di atas dalam satu buah tampilan tabel *Grid* 3x3.
 * **`Image.jpg`**: Citra sampel yang digunakan sebagai bahan uji coba pengolahan.
 
 ## 🛠️ Persyaratan Sistem
 
-Pastikan *library* berikut sudah terinstal di komputer Anda:
+Pastikan *library* berikut sudah terinstal di *environment* komputer Anda sebelum menjalankan *notebook*:
 ```bash
-pip install opencv-python numpy
+pip install opencv-python numpy matplotlib ipykernel
