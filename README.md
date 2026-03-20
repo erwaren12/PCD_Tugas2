@@ -17,7 +17,6 @@ Untuk mencegah efek klise pada warna asli (distorsi warna), citra berwarna (BGR)
 * **`logaritmik.ipynb`**: Implementasi Transformasi Logaritmik ($G = c \cdot \log(F + 1)$).
 * **`inverse_logaritmik.ipynb`**: Implementasi Transformasi Inverse Logaritmik ($G = c \cdot \log(L - F + 1)$).
 * **`power_law.ipynb`**: Implementasi Transformasi Power Law ($G = c \cdot F^y$).
-* **`main.ipynb`**: *Notebook* utama berupa rangkuman yang memproses dan menampilkan seluruh metode transformasi di atas dalam satu buah tampilan tabel *Grid* 3x3.
 * **`Image.jpg`**: Citra sampel yang digunakan sebagai bahan uji coba pengolahan.
 
 ## 🛠️ Persyaratan Sistem
